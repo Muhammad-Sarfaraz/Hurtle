@@ -1,13 +1,16 @@
 {
-	"name": "cloudflare-workers-openapi",
-	"version": "0.0.1",
-	"private": true,
+	"name": "create-hurtle",
+	"version": "0.0.9",
+	"private": false,
 	"scripts": {
 		"deploy": "wrangler deploy",
 		"dev": "wrangler dev",
 		"start": "wrangler dev",
 		"cf-typegen": "wrangler types",
 		"format": "prettier --write **/*.ts"
+	},
+	"bin": {
+		"create-hurtle": "bin/create-hurtle.js"
 	},
 	"dependencies": {
 		"axios": "^1.7.7",
