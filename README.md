@@ -4,10 +4,11 @@
 
 Follow these steps to get started with the project:
 
-1. npx create-hurtle <app-name>
+1. Get started by:
 
+    npx create-hurtle <app-name>
 
-4. Start the development server:
+2. Start the development server:
 
    bash
    npm run start
