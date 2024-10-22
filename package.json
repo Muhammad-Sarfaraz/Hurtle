@@ -1,20 +1,53 @@
 {
 	"name": "create-hurtle",
-	"version": "0.0.26",
+	"version": "0.0.27",
+	"description": "Go-to boilerplate for deploying Hono.js on Cloudflare Workers",
 	"private": false,
+	"engines": {
+		"node": ">=12.0.0"
+	},
+	"repository": "https://github.com/Muhammad-Sarfaraz/Hurtle.git",
+	"author": "Sarfaraz Muhammad Sajib",
+	"license": "MIT",
+	"keywords": [
+		"create-hurtle",
+		"cloudflare",
+		"workers",
+		"cloudflare-worker",
+		"cloudflare-workers",
+		"boilerplate",
+		"template",
+		"starter",
+		"example",
+		"hono",
+		"api",
+		"rest",
+		"es6",
+		"es7",
+		"es8",
+		"es9",
+		"jwt",
+		"zod",
+		"eslint",
+		"prettier"
+	],
 	"scripts": {
 		"deploy": "wrangler deploy",
 		"dev": "wrangler dev",
 		"start": "wrangler dev",
 		"cf-typegen": "wrangler types",
-		"format": "prettier --write **/*.ts"
+		"format": "prettier --write **/*.ts",
+		"lint": "eslint .",
+		"lint:fix": "eslint . --fix"
 	},
 	"bin": {
 		"create-hurtle": "bin/create-hurtle.js"
 	},
+	"type": "module",
 	"dependencies": {
 		"axios": "^1.7.7",
 		"hono": "^4.4.7",
+		"http-status": "^2.0.0",
 		"lodash": "^4.17.21",
 		"zod": "^3.23.8"
 	},
@@ -22,7 +55,17 @@
 		"@cloudflare/workers-types": "^4.20240919.0",
 		"@types/node": "20.8.3",
 		"@types/service-worker-mock": "^2.0.1",
+		"esbuild": "^0.23.1",
+		"eslint": "^9.9.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-import-x": "^3.1.0",
+		"eslint-plugin-node": "^11.1.0",
+		"eslint-plugin-prettier": "^5.2.1",
+		"eslint-plugin-vitest": "^0.5.4",
 		"prettier": "^3.3.3",
+		"ts-node": "^10.9.2",
+		"typescript": "^5.5.4",
+		"typescript-eslint": "^8.2.0",
 		"wrangler": "^3.60.3"
 	}
 }
