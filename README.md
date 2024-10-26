@@ -1,3 +1,7 @@
+<div align="center">
+  <img width="200" src="https://github.com/Muhammad-Sarfaraz/Hurtle/blob/main/art/logo.png">
+</div>
+
 <h1 align="center">Hurtle</h1>
 
 <p align="center">
