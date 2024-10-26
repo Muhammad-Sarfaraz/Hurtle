@@ -38,8 +38,8 @@ const copyRecursive = (src, dest) => {
         const srcPath = path.join(src, file);
         const destPath = path.join(dest, file);
 
-        // Skip the 'bin' folder
-        if (file === 'bin' || file === 'node_modules') {
+        // Skip the 'bin','art','node_modules' folder
+        if (file === 'bin' || file === 'art' file === 'node_modules') {
             return;
         }
 
