@@ -1,6 +1,6 @@
 {
 	"name": "create-hurtle",
-	"version": "0.0.28",
+	"version": "0.0.29",
 	"description": "Go-to boilerplate for deploying Hono.js on Cloudflare Workers",
 	"private": false,
 	"engines": {
