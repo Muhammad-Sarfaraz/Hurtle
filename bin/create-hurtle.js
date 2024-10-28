@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-const { exec } = require('child_process');
+import fs from 'fs';
+import path from 'path';
+import { exec } from 'child_process';
+import { fileURLToPath } from 'url';
 
 // Get the app name from the command line
 const appName = process.argv[2];
@@ -25,12 +26,12 @@ if (fs.existsSync(appDirectory)) {
 console.log(`\x1b[32mCreating a new project in ${appName}...\x1b[0m`);
 fs.mkdirSync(appDirectory);
 
-// Clone the root directory
-const rootDir = path.join(__dirname, '../'); // Adjust this if your script is in a different location
+// Get the root directory
+const __filename = fileURLToPath(import.meta.url);
+const rootDir = path.join(path.dirname(__filename), '../');
 
 // Function to copy files and directories recursively
 const copyRecursive = (src, dest) => {
-    // Create destination directory only if it does not exist
     if (!fs.existsSync(dest)) {
         fs.mkdirSync(dest, { recursive: true });
     }
@@ -38,10 +39,7 @@ const copyRecursive = (src, dest) => {
         const srcPath = path.join(src, file);
         const destPath = path.join(dest, file);
 
-        // Skip the 'bin','art','node_modules' folder
-        if (file === 'bin' || file === 'art' || file === 'node_modules') {
-            return;
-        }
+        if (['bin', 'art', 'node_modules'].includes(file)) return;
 
         if (fs.statSync(srcPath).isDirectory()) {
             copyRecursive(srcPath, destPath);
