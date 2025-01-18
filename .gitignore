@@ -1,5 +1,8 @@
 # Node modules
-node_modules/
+node_modules
+
+# Github Action
+.github
 
 # Cloudflare Workers build output
 /dist/
